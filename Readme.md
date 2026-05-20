@@ -24,3 +24,6 @@ Se cambiaron CSS, formulario correpsondiente y se realizo el commit correspondie
 Añadido de JS vinculado a HTML 
 
 Se realizarno tres commits con las secciones correspondientes de A, b y c
+
+
+Reflexion final: Iba tan bien en los pasos pero cree el readme.md aqui y lo comence a editar, despues para subir los archivos tuve problemas y tuve que subirlos manualmente aqui en github profesor. La verdad es que no se que problema me daba github, sin embargo logre realziar todo lo otro correspondiente
