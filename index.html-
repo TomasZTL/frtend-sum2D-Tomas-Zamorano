@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar Equipo - TechFix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container" id="formContainer">
+        <h2>Ingresar Equipo al Servicio Técnico</h2>
+        <div id="resumenErrores" class="hidden" style="color: red; margin-bottom: 15px; font-weight: bold;"></div>
+        
+        <form id="ingresoForm" novalidate>
+            <section class="form-section">
+                <h3>A. Datos del Cliente</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo *</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                        <span class="error-msg">Ingrese un nombre válido (solo letras, 5-80 caracteres).</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="dni">DNI *</label>
+                        <input type="text" id="dni" name="dni" required>
+                        <span class="error-msg">El DNI debe tener 7 u 8 dígitos numéricos.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico *</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-msg">Formato de correo inválido.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailConfirm">Confirmar correo *</label>
+                        <input type="email" id="emailConfirm" name="emailConfirm" required>
+                        <span class="error-msg">Los correos no coinciden.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono *</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                        <span class="error-msg">Mínimo 8 dígitos permitidos.</span>
+                    </div>
+                    <div class="form-group">
+                        <fieldset>
+                            <legend>Tipo de cliente *</legend>
+                            <label><input type="radio" name="tipoCliente" value="Particular" checked> Particular</label>
+                            <label><input type="radio" name="tipoCliente" value="Empresa"> Empresa</label>
+                        </fieldset>
+                    </div>
+                </div>
+
+                <div class="form-grid hidden" id="divEmpresa">
+                    <div class="form-group">
+                        <label for="nombreEmpresa">Nombre de la Empresa *</label>
+                        <input type="text" id="nombreEmpresa" name="nombreEmpresa">
+                        <span class="error-msg">Este campo es obligatorio.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="cuit">CUIT *</label>
+                        <input type="text" id="cuit" name="cuit" placeholder="Ej: 20-12345678-9">
+                        <span class="error-msg">Formato CUIT inválido.</span>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="provincia">Provincia *</label>
+                        <select id="provincia" name="provincia" required>
+                            <option value="">Seleccione...</option>
+                            <option value="BA">Buenos Aires</option>
+                            <option value="CABA">CABA</option>
+                            <option value="CBA">Córdoba</option>
+                            <option value="SF">Santa Fe</option>
+                            <option value="MZ">Mendoza</option>
+                            <option value="ER">Entre Ríos</option>
+                            <option value="TU">Tucumán</option>
+                            <option value="SA">Salta</option>
+                            <option value="CH">Chaco</option>
+                            <option value="RN">Río Negro</option>
+                        </select>
+                        <span class="error-msg">Seleccione una provincia.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="localidad">Localidad *</label>
+                        <input type="text" id="localidad" name="localidad" required>
+                        <span class="error-msg">Localidad requerida (mín. 2 caracteres).</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h3>B. Datos del Equipo</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="tipoDispositivo">Tipo de dispositivo *</label>
+                        <select id="tipoDispositivo" name="tipoDispositivo" required>
+                            <option value="">Seleccione...</option>
+                            <option value="Notebook">Notebook</option>
+                            <option value="Escritorio">Computador de escritorio</option>
+                            <option value="Impresora">Impresora</option>
+                            <option value="Tablet">Tablet</option>
+                            <option value="Movil">Teléfono móvil</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                        <span class="error-msg">Seleccione un tipo.</span>
+                    </div>
+                    <div class="form-group hidden" id="divOtroDispositivo">
+                        <label for="otroDispositivo">Especifique el dispositivo *</label>
+                        <input type="text" id="otroDispositivo" name="otroDispositivo">
+                        <span class="error-msg">Especifique el dispositivo.</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="marca">Marca *</label>
+                        <select id="marca" name="marca" required>
+                            <option value="">Seleccione...</option>
+                            <option value="HP">HP</option><option value="Dell">Dell</option>
+                            <option value="Lenovo">Lenovo</option><option value="Apple">Apple</option>
+                            <option value="Samsung">Samsung</option><option value="Asus">Asus</option>
+                            <option value="Otra">Otra</option>
+                        </select>
+                        <span class="error-msg">Seleccione una marca.</span>
+                    </div>
+                    <div class="form-group hidden" id="divOtraMarca">
+                        <label for="otraMarca">Especifique la marca *</label>
+                        <input type="text" id="otraMarca" name="otraMarca">
+                        <span class="error-msg">Especifique la marca.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="modelo">Modelo *</label>
+                        <input type="text" id="modelo" name="modelo" required>
+                        <span class="error-msg">Modelo requerido.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="so">Sistema operativo *</label>
+                        <select id="so" name="so" required>
+                            <option value="">Seleccione...</option>
+                            <option value="Win10">Windows 10</option>
+                            <option value="Win11">Windows 11</option>
+                            <option value="macOS">macOS</option>
+                            <option value="Linux">Linux</option>
+                            <option value="Android">Android</option>
+                            <option value="iOS">iOS</option>
+                            <option value="NA">No aplica / No sabe</option>
+                        </select>
+                        <span class="error-msg">Seleccione un sistema operativo.</span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label><input type="checkbox" id="checkGarantia"> El equipo tiene garantía vigente</label>
+                </div>
+                <div class="form-group hidden" id="divOrdenGarantia">
+                    <label for="ordenGarantia">Número de orden / Fecha de compra *</label>
+                    <input type="text" id="ordenGarantia" name="ordenGarantia">
+                    <span class="error-msg">Ingrese el número de orden.</span>
+                </div>
+                <div class="form-group">
+                    <label style="color: #c00;"><input type="checkbox" id="datosSinRespaldo"> ⚠️ El equipo contiene datos importantes sin respaldo (TechFix no se responsabiliza).</label>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h3>C. Descripción del Problema</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="tipoProblema">Tipo de problema principal *</label>
+                        <select id="tipoProblema" name="tipoProblema" required>
+                            <option value="">Seleccione...</option>
+                            <option value="No enciende">No enciende</option>
+                            <option value="Pantalla">Pantalla dañada</option>
+                            <option value="Lentitud">Lentitud</option>
+                            <option value="Virus">Virus</option>
+                            <option value="Red">Red</option>
+                            <option value="Liquido">Daño por líquido</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                        <span class="error-msg">Seleccione un problema.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="desdeCuando">Desde cuándo ocurre *</label>
+                        <select id="desdeCuando" name="desdeCuando" required>
+                            <option value="">Seleccione...</option>
+                            <option value="Hoy">Hoy</option>
+                            <option value="Dias">Hace algunos días</option>
+                            <option value="Semanas">Hace semanas</option>
+                            <option value="Meses">Hace meses</option>
+                        </select>
+                        <span class="error-msg">Seleccione una opción.</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <fieldset>
+                        <legend>El problema es *</legend>
+                        <label><input type="radio" name="frecuencia" value="Permanente" required> Permanente</label>
+                        <label><input type="radio" name="frecuencia" value="Intermitente" required> Intermitente</label>
+                    </fieldset>
+                    <span class="error-msg" id="errFrecuencia">Seleccione una opción.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="descripcion">Descripción detallada del problema *</label>
+                    <textarea id="descripcion" name="descripcion" rows="4" maxlength="500" required></textarea>
+                    <div class="contador" id="contDescripcion">0 / 500</div>
+                    <span class="error-msg">Mínimo 20 caracteres.</span>
+                </div>
+
+                <div class="form-group">
+                    <label><input type="checkbox" id="checkReparacion"> Ya intentó repararlo o lo llevó a otro técnico</label>
+                </div>
+                <div class="form-group hidden" id="divReparacionPrevia">
+                    <label for="reparacionPrevia">¿Qué se hizo anteriormente?</label>
+                    <textarea id="reparacionPrevia" name="reparacionPrevia" rows="3" maxlength="300"></textarea>
+                    <div class="contador" id="contReparacion">0 / 300</div>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h3>D. Preferencias de Entrega y Confirmación</h3>
+                <div class="form-group">
+                    <fieldset>
+                        <legend>Modalidad de entrega *</legend>
+                        <label><input type="radio" name="modalidadEntrega" value="Local" required> Lo llevo personalmente al local</label>
+                        <label><input type="radio" name="modalidadEntrega" value="Domicilio" required> Solicito retiro a domicilio</label>
+                    </fieldset>
+                    <span class="error-msg" id="errModalidad">Seleccione una modalidad.</span>
+                </div>
+                <div class="form-group hidden" id="divDireccion">
+                    <label for="direccion">Dirección completa *</label>
+                    <input type="text" id="direccion" name="direccion">
+                    <span class="error-msg">Mínimo 10 caracteres.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="presupuesto">Presupuesto máximo autorizado *</label>
+                    <select id="presupuesto" name="presupuesto" required>
+                        <option value="">Seleccione...</option>
+                        <option value="5k">Hasta $5.000</option>
+                        <option value="15k">Hasta $15.000</option>
+                        <option value="30k">Hasta $30.000</option>
+                        <option value="Ilimitado">Sin límite</option>
+                        <option value="Consultar">Consultar antes</option>
+                    </select>
+                    <span class="error-msg">Seleccione un presupuesto.</span>
+                </div>
+
+                <div class="form-group">
+                    <fieldset>
+                        <legend>Preferencia de contacto *</legend>
+                        <label><input type="checkbox" name="prefContacto" value="WhatsApp"> WhatsApp</label>
+                        <label><input type="checkbox" name="prefContacto" value="Email"> Correo electrónico</label>
+                        <label><input type="checkbox" name="prefContacto" value="Llamada"> Llamada telefónica</label>
+                    </fieldset>
+                    <span class="error-msg" id="errContacto">Seleccione al menos una opción.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="horario">Horario preferido para contacto *</label>
+                    <select id="horario" name="horario" required>
+                        <option value="">Seleccione...</option>
+                        <option value="Manana">Mañana 9 a 12</option>
+                        <option value="Tarde">Tarde 12 a 17</option>
+                        <option value="Noche">Tarde-noche 17 a 20</option>
+                        <option value="Indistinto">Indistinto</option>
+                    </select>
+                    <span class="error-msg">Seleccione un horario.</span>
+                </div>
+
+                <div class="form-group">
+                    <label><input type="checkbox" id="checkDiagnostico" required> Acepto que el diagnóstico puede demorar hasta 48 hrs hábiles *</label>
+                    <span class="error-msg" id="errDiagnostico">Debe aceptar esta condición.</span>
+                </div>
+                <div class="form-group">
+                    <label><input type="checkbox" id="checkTerminos" required> Acepto los <a href="#">Términos y Condiciones</a> *</label>
+                    <span class="error-msg" id="errTerminos">Debe aceptar los términos.</span>
+                </div>
+            </section>
+
+            <div style="text-align: center; gap: 15px; display: flex; justify-content: center;">
+                <button type="submit" class="btn-primary">Registrar ingreso</button>
+                <button type="reset" class="btn-ingresar" style="background: #ccc; color: #333;">Limpiar</button>
+            </div>
+            <div style="text-align: center; margin-top: 15px;">
+                <a href="index.html">Volver al inicio</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="form-container hidden" id="pantallaConfirmacion" style="text-align: center;">
+        <h2 style="color: var(--success-color);">¡Ingreso Registrado con Éxito!</h2>
+        <p>Número de Orden: <strong id="confOrden" style="font-size: 1.5rem;"></strong></p>
+        <p><strong>Cliente:</strong> <span id="confNombre"></span></p>
+        <p><strong>Equipo:</strong> <span id="confEquipo"></span></p>
+        <p><strong>Modalidad:</strong> <span id="confModalidad"></span></p>
+        <p style="margin-top: 20px; font-style: italic;">Su equipo será diagnosticado en un plazo máximo de 48 horas hábiles.</p>
+        <div style="margin-top: 30px; display: flex; justify-content: center; gap: 15px;">
+            <a href="index.html" class="btn-ingresar" style="background: #ccc; color: #333; text-decoration:none;">Volver al inicio</a>
+            <button onclick="location.reload()" class="btn-primary" style="border:none; cursor:pointer;">Ingresar otro equipo</button>
+        </div>
+    </div>
+
+    <script src="validaciones.js"></script>
+</body>
+</html>
