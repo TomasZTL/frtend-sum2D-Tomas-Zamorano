@@ -1,0 +1,34 @@
+============================================================
+CONSULTA
+#[1] Etapa del proyecto: [Etapa 1 ] Fecha:[20/05/2026] 
+------------------------------------------------------------
+PROMPT ENVIADO A COPILOT: Necesito que me crees un sitio web en base a esto: Barra de Navegacion..
+-----------------------------------------------------------
+RESPUESTA RECIBIDA (resumen breve): Sure, here's a proposed directory structure for a website project:
+----------------------------------------------------------
+-- USO EN EL PROYECTO: Al inicio me tiro una pagina super vaga, pero utilice otro modelo de copilot Claude y 
+me dio mejor resultado a algo mas acorde a lo que me pedia la empresa
+ ------------------------------------------------------
+------ REFLEXION PERSONAL: Tuve que modificar el prompt de manera que este tenia que ser mas preciso, a veces la ia se sale de los parametros 
+que uno le pide, sin embargo con un buen prompt funciona bien. Tambien cabe destacar que me creo un CSS medio vago, por eso tuve que nuevamente crear otro prompt
+especifico para el CSS.
+============================================================
+
+============================================================
+CONSULTA
+#[1] Etapa del proyecto: [Etapa 1 ] Fecha:[20/05/2026] 
+------------------------------------------------------------
+PROMPT ENVIADO A COPILOT: Necesito que me crees un sitio web en base a esto: Barra de Navegacion..
+-----------------------------------------------------------
+RESPUESTA RECIBIDA (resumen breve): Sure, here's a proposed directory structure for a website project:
+----------------------------------------------------------
+-- USO EN EL PROYECTO: Al inicio me tiro una pagina super vaga, pero utilice otro modelo de copilot Claude y 
+me dio mejor resultado a algo mas acorde a lo que me pedia la empresa
+ ------------------------------------------------------
+------ REFLEXION PERSONAL: Tuve que modificar el prompt de manera que este tenia que ser mas preciso, a veces la ia se sale de los parametros 
+que uno le pide, sin embargo con un buen prompt funciona bien. Tambien cabe destacar que me creo un CSS medio vago, por eso tuve que nuevamente crear otro prompt
+especifico para el CSS.
+============================================================
+
+
+No escribi mas pq no alcance profe
